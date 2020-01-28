@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon, PageHeader, Divider, Tag } from 'antd';
 import 'antd/dist/antd.css';
+import Header from './components/Header/index'
 
 import { Button } from 'antd';
 import './App.css';
@@ -36,11 +37,14 @@ import BreadcrumbCustom from './breadcrumb'
       <span style={{paddingLeft:'8px'}}><a href="">Show more...</a></span>
 
   </div>
+          <div>
+            <Header/>
+
+          </div>
 </div>
 
 
-
-      )
+    )
     
   }
   

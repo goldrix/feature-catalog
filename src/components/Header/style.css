@@ -1,0 +1,10 @@
+.input{
+    width:0;
+    transition: width 0.5s ease-in;
+
+}
+
+.input.active{
+    width: 150px;
+}
+
