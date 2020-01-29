@@ -4,7 +4,7 @@ import './style.css';
 
 
 
-const Header = (props) => {
+const Test = (props) => {
     const [isContentCollapsed, isContentExtended] = React.useState(false);
     const extendContent = () =>{
         isContentExtended(!isContentCollapsed);
@@ -49,4 +49,4 @@ const Header = (props) => {
     )
 }
 
-export default Header
+export default Test
