@@ -2,9 +2,8 @@ import React, {useState} from 'react'
 import Card from './components/Card/index'
 import './app.css'
 import 'antd/dist/antd.css';
-import { Layout, Menu, Breadcrumb, Icon, Button, Avatar } from 'antd';
+import { Layout, Menu, Breadcrumb, Icon, Button, Avatar, Tooltip } from 'antd';
 import { Row, Col } from 'antd';
-import classNames from 'classnames'
 
 const { SubMenu } = Menu;
 
@@ -23,7 +22,7 @@ const { SubMenu } = Menu;
 
 const App = (props) =>{
 
-   
+    // const HomeText = <span>Home</span>;
       
     return(
         <div>
@@ -39,29 +38,41 @@ const App = (props) =>{
                         <li>
                             
                             <a href="#" className="menu-item"><Icon type="home" className="menuIcon"/>Home</a>
-                            <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("./assets/home.svg")} className="simple-icon"></img></a>
+                            <div className="simple-menu-container">
+                                <Tooltip placement="top" title={'Home'}>
+                                    <a href="#" className="menu-item-simple">
+                                    <img src={require("./assets/home.svg")} className="simple-icon"></img></a>
+                                </Tooltip>
                             </div>
                         </li>
                             
                         <li>
                             <a href="#" className="menu-item"><Icon type="compass" className="menuIcon"/>Explore</a>
-                            <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("./assets/explore.svg")} className="simple-icon"></img></a>
-                            </div>
+                            <Tooltip placement="top" title={'Explore'}>
+                                <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("./assets/explore.svg")} className="simple-icon"></img></a>
+                                </div>
+                            </Tooltip>
                         </li>
                         <li>
                             <a href="#" className="menu-item"><Icon type="book" className="menuIcon"/>Bookmarks</a>
-                            <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("./assets/bookmarks.svg")} className="simple-icon"></img></a>
-                            </div>
+                            <Tooltip placement="top" title={'Bookmarks'}>
+                                <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("./assets/bookmarks.svg")} className="simple-icon"></img></a>
+                                </div>
+                            </Tooltip>
                         </li>
                         <li>
                             <a href="#" className="menu-item"><Icon type="line-chart" className="menuIcon"/>Reports</a>
-                            <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("./assets/reports.svg")} className="simple-icon"></img></a>
-                            </div>
+                            <Tooltip placement="top" title={'Reports'}>
+                                <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("./assets/reports.svg")} className="simple-icon"></img></a>
+                                </div>
+                            </Tooltip>
                         </li>
                         <li>
                             <a href="#" className="menu-item"><Icon type="link" className="menuIcon"/>Aliases</a>
-                            <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("./assets/aliases.svg")} className="simple-icon"></img></a>
-                            </div>
+                            <Tooltip placement="top" title={'Aliases'}>
+                                <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("./assets/aliases.svg")} className="simple-icon"></img></a>
+                                </div>
+                            </Tooltip>
                         </li>
                      
                     </ul>
