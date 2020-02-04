@@ -1,0 +1,21 @@
+
+
+.CardContainer{
+    margin: 60px;
+    width: 700px;
+    border-left: 3px solid #1CBCF8;
+    border-radius: 2px;
+    /* height: 700px; */
+    
+  }
+  
+  .internalContainer{
+    padding: 16px 16px;
+  
+  }
+  
+  .divider-text{
+    font-size: 12px;
+    /* line-height: 22px; */
+    color: rgba(0, 0, 0, 0.25);
+  }

@@ -1,9 +1,12 @@
 
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400,400i&display=swap');
 
 .CardContainer{
   margin: 60px;
-  width: 700px;
-  border-left: 3px solid #1CBCF8;
+  max-width: 700px;
+  width: 80vw;
+  /* border-left: 3px solid #1CBCF8; */
+  border: 1px solid rgb(235, 237, 240);
   border-radius: 2px;
   /* height: 700px; */
   
@@ -19,3 +22,37 @@
   /* line-height: 22px; */
   color: rgba(0, 0, 0, 0.25);
 }
+
+.bread-crumb-container{
+  display: flex;
+  justify-content:  space-between; 
+  flex-wrap: wrap;
+}
+
+.anticon-star svg{
+  fill:#F6C35D;
+}
+
+.CardContainer h2{
+  color: #3277A5;
+}
+
+.data-information{
+  display: flex;
+  align-items:baseline;
+  
+}
+
+.property-style{ 
+  color:rgba(0, 0, 0, 0.65);
+}
+
+.property-style:hover{ 
+  color:rgba(0, 0, 0, 0.65);
+  text-decoration: underline;
+
+}
+.taxonomy-style{
+  margin: 16px 0;
+}
+
