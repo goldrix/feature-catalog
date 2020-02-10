@@ -11,11 +11,11 @@ const Card = (props) => {
 
 
 
-  // const  [isMoreDescription, setIsMoreDescription] = React.useState(false);
+  const  [isMoreDescription, setIsMoreDescription] = React.useState(false);
     
-  // const moreDescription = () =>{
-  //   setIsMoreDescription(!isMoreDescription)
-  // }
+  const moreDescription = () =>{
+    setIsMoreDescription(!isMoreDescription)
+  }
   
   const [isMoreTaxonomy, setIsMoreTaxomomy] = useState(false)
  
@@ -31,21 +31,14 @@ const Card = (props) => {
 
 
 
-React.state={
-   toggle:false
- }
-  function moreDescription(){
-    const newState = !this.state.toggle;
-    this.setState({toggle:newState})
-  }
 
-  const {toggle} = this.state;
-  const textValue = toggle?"ON":"OF"
-       
+   
+   let textValue = "Show more"
+
      
+  {isMoreDescription? textValue='show lessss': textValue='show more'}
      
-     
-return(
+  return(
   
         
 
@@ -56,8 +49,7 @@ return(
 
           <Breadcrumb style={{paddingBottom:'16px'}}>
                 <Breadcrumb.Item >
-                  {/* <span style={{paddingRight:'8px'}}>Aliase:</span> */}
-                  {/* <Icon type="user" /> */}
+             
                 </Breadcrumb.Item>
                 <Breadcrumb.Item >
                   <span>user</span>
@@ -91,10 +83,10 @@ return(
 
         <div className="description-container">
             <span class="ant-page-header-heading-sub-title"><p>Fugiat labore nulla sunt nulla ea. Non laboris sint minim exercitation voluptate est ea adipisicing. Nisi irure aliquip officia ex. Incididunt proident consectetur esse mollit velit. Eu ex dolor velit cillum cillum enim. Amet non est sint excepteur fugiat ea do veniam id ex.
-              {/* {isMoreDescription && (<span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat blanditiis recusandae labore facilis magnam? Quod non vero esse alias sequi libero saepe. Deleniti ipsum perferendis molestiae aspernatur eius expedita praesentium.</span>)} */}
+              {isMoreDescription && (<span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat blanditiis recusandae labore facilis magnam? Quod non vero esse alias sequi libero saepe. Deleniti ipsum perferendis molestiae aspernatur eius expedita praesentium.</span>)}
             
 
-            <a href='#' style={{paddingLeft:'8px'}} onClick={this.moreDescription}>{textValue}</a></p></span>
+            <a href='#' style={{paddingLeft:'8px'}} onClick={moreDescription}>{textValue}</a></p></span>
          </div>
 
 

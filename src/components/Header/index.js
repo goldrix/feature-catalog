@@ -24,7 +24,6 @@ const Header = (props) =>{
                 
                     <ul className="navbar">
                         <li>
-                            
                             <a href="#" className="menu-item"><Icon type="home" className="menuIcon"/>Home</a>
                             <div className="simple-menu-container">
                                 <Tooltip placement="top" title={'Home'}>

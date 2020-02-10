@@ -2,9 +2,14 @@ import React, {useState} from 'react'
 import Card from './components/Card/index'
 import './app.css'
 import 'antd/dist/antd.css';
-import Header from './components/Header/index'
-// import Test from './components/Test/index'
-// import TestTwo from './components/test2/index'
+import CustomHeader from './components/Header/index'
+import ExportLeftFilter from './components/ExploreLeftFilter/index'
+import { Layout, Menu } from 'antd';
+import CardContainer from './components/CardContainer/index'
+import Test from './components/test3/index'
+
+const { SubMenu } = Menu;
+const { Header, Content, Footer, Sider } = Layout;
 
 
 
@@ -15,14 +20,45 @@ const App = (props) =>{
 
       
     return(
-        <div>
-            <Header/>
-            <Card/>
-            
-           
-         
-        </div>
-    )
-}
+        
+   <Layout>
+      <CustomHeader/>
+    
+    <Content>
+      
+      <Layout>
+        <Sider>
+            <ExportLeftFilter/>
 
-export default App
+        </Sider>
+            <Content>
+                <CardContainer renderCard={()=><Card/>} renderTable={()=><div>TABLE!!!!</div>}/> 
+            </Content>
+      </Layout>
+            
+    </Content>
+    
+  {/* <Test/> */}
+  </Layout>
+
+            
+            
+            
+            
+            
+            )
+        }
+        
+        export default App
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        {/* <CardContainer renderCard={()=><Card/>} renderTable={()=><div>TABLE!!!</div>}/> */}

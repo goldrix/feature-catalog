@@ -75,7 +75,12 @@
 .simple-icon{
     width: 1.7em;
     height: 1.7em;
+    
 }
+
+
+    
+ 
 
 /* BUTTONS NAVIGATION */
 .add-feature-button{
@@ -111,9 +116,6 @@
     margin-left: 20px;
 }
 
-@media (min-width: 1150px) { 
-   
-}
 
 @media (max-width: 1155px) { 
     .add-feature-button-small{
@@ -130,41 +132,30 @@
         display: none;
     }
 
-
  }
- @media (max-width: 860px) { 
+ @media (max-width: 900px) { 
     .menu-item{
         display: none;
     }
     .menu-item-simple{
         display: inline-block;
-        
-        
     }
-    
-    .navbar a{
-        /* padding-top: 10px;  */
-    }
+   
     .simple-menu-container{
         /* align-items: center; */
         /* padding-top:5px; */
         height: 48px;
         
     }
+
+    
     .headerRow ul li a:hover,
     .headerRow ul li a:focus{
-    color: white;
-    cursor: pointer;
+    
     padding-bottom: 1px;
-    border-bottom: solid 3px #FAAD14;
+    
 }
     
-    .navbar svg{
-        /* width: 2em;
-        height: 2em; 
-        vertical-align: middle; */
-        /* line-height: 44px; */
-    }
 
   }
 
