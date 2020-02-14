@@ -1,7 +1,9 @@
+
 import React, {useState} from 'react'
+import './style.css'
 import { Radio } from 'antd';
 
-const TableView = (props) =>{
+const ViewOptions = (props) =>{
     
     
   const [view, setView] = React.useState('card')
@@ -12,7 +14,7 @@ const TableView = (props) =>{
     
     
     return(
-        <div>
+        <div className="viewOptionsContainer">
         <Radio.Group value={view} onChange={handleViewChange}>
           <Radio.Button value="card">Large</Radio.Button>
           <Radio.Button value="table">table</Radio.Button>
@@ -25,7 +27,7 @@ const TableView = (props) =>{
 
 
 
-export default TableView
+export default ViewOptions
 
 
 

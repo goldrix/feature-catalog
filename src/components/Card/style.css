@@ -2,11 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400,400i&display=swap');
 
 .CardContainer{
-  margin: 20px;
   max-width: 700px;
-  width: 80vw;
+  width: 70vw;
   /* border-left: 3px solid #1CBCF8; */
-  border: 1px solid rgb(235, 237, 240);
   border-radius: 2px;
   /* height: 700px; */
   
@@ -14,6 +12,10 @@
 
 .internalContainer{
   padding: 16px 16px;
+  border: 1px solid rgb(235, 237, 240);
+  margin: 20px 0;
+  
+
 
 }
 
@@ -29,7 +31,7 @@
   flex-wrap: wrap;
 }
 
-.anticon-star svg{
+.CardContainer .anticon-star svg{
   fill:#F6C35D;
 }
 
