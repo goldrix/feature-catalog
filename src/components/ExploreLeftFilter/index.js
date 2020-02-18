@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
-import { Layout, Menu, Button, Breadcrumb, Icon } from 'antd';
-const { Header, Content, Footer, Sider } = Layout;
+import { Layout, Menu, Icon } from 'antd';
+// const { Header, Button, Breadcrumb, Content, Footer, Sider } = Layout;
 
 const { SubMenu } = Menu;
 
@@ -12,7 +12,7 @@ class ExploreLeftFilter extends React.Component {
 
   render() {
     return (
-      <div style={{ width: 256 }}>
+      <div style={{ width: '256px' }}>
         
         <Menu
           defaultSelectedKeys={['1']}

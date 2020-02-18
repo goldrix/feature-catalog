@@ -20,32 +20,41 @@ const App = (props) =>{
 
       
     return(
-        
-   <Layout>
-      <CustomHeader/>
-    
-    <Content>
-      
-            <ExportLeftFilter/>
-      <Layout>
-        
 
+
+    
+    
+    <div className="content-container">
+
+    <Layout>
+      <CustomHeader/>
+    <Layout>
+        <Sider theme="light" width="256">
+          <ExportLeftFilter/>
+        </Sider>
         
-            <ViewOptions
+        
+        <Content>
+         <ViewOptions
             renderCard={()=>
             <div><Card/></div>}
             
             renderTable={()=>
             <div>TABLE!!!!</div>}/> 
             <Content/>
-            
-            
+          
+          </Content>
       </Layout>
-            
-    </Content>
-    
- 
-  </Layout>
+      
+    </Layout>
+
+    </div>
+
+
+
+
+        
+
 
             
             

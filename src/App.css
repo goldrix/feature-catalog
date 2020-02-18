@@ -1,3 +1,8 @@
 .ant-layout{
     background: white;
 }
+
+.content-container aside{
+    padding-top: 20px; 
+}
+
