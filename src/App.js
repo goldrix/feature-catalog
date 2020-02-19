@@ -7,6 +7,7 @@ import ExportLeftFilter from './components/ExploreLeftFilter/index'
 import { Layout, Menu } from 'antd';
 import ViewOptions from './components/ViewOptions/index'
 import Test from './components/test3/index'
+import CardTableView from '../src/components/Table/index'
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -40,7 +41,10 @@ const App = (props) =>{
             <div><Card/></div>}
             
             renderTable={()=>
-            <div>TABLE!!!!</div>}/> 
+            <div>
+              <CardTableView/>
+              
+              </div>}/> 
             <Content/>
           
           </Content>
