@@ -34,7 +34,7 @@ const Header = (props) =>{
                         </li>
                             
                         <li>
-                            <a href="#" className="menu-item"><Icon type="compass" className="menuIcon"/>Explore</a>
+                            <a href="#" className="active menu-item"><Icon type="compass" className="menuIcon"/>Explore</a>
                             <Tooltip placement="top" title={'Explore'}>
                                 <div className="simple-menu-container"><a href="#" className="menu-item-simple"><img src={require("../../assets/explore.svg")} className="simple-icon"></img></a>
                                 </div>

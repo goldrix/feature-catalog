@@ -5,50 +5,66 @@ import { Table, Divider, Tag } from "antd"
 const CardTableView = () =>{
 
         const columns = [
-            {
-              title: 'Name',
-              dataIndex: 'name',
-              key: 'name',
+          {
+            title: 'Type',
+            key: 'type',
+            dataIndex: 'tags',
+            render: tags => (
+              <span>
+                {tags.map(tag => {
+                  let color = tag;
+                  if (tag === 'FS') {
+                    color = 'blue';
+                  }else{
+                    color="gold"
+                  }
+
+                  return (
+                    <Tag color={color} key={tag}>
+                      {tag.toUpperCase()}
+                    </Tag>
+                  );
+                })}
+              </span>
+            ),
+          },  
+          {
+              title: 'Feature set name',
+              dataIndex: 'FeatureSetName',
+              key: 'FeatureSetName',
               render: text => <a>{text}</a>,
             },
+            
             {
-              title: 'Age',
-              dataIndex: 'age',
-              key: 'age',
+              title: 'Created date',
+              dataIndex: 'CreatedDate',
+              key: 'CreatedDate',
             },
             {
-              title: 'Address',
-              dataIndex: 'address',
-              key: 'address',
+              title: 'WLS',
+              dataIndex: 'wls',
+              key: 'wls',
             },
             {
-              title: 'Tags',
-              key: 'tags',
-              dataIndex: 'tags',
-              render: tags => (
-                <span>
-                  {tags.map(tag => {
-                    let color = tag.length > 5 ? 'geekblue' : 'green';
-                    if (tag === 'loser') {
-                      color = 'volcano';
-                    }
-                    return (
-                      <Tag color={color} key={tag}>
-                        {tag.toUpperCase()}
-                      </Tag>
-                    );
-                  })}
-                </span>
-              ),
+              title: 'RF',
+              dataIndex: 'rf',
+              key: 'rf',
             },
+            {
+              title: 'DQ',
+              dataIndex: 'dq',
+              key: 'dq',
+            },
+            
+            
             {
               title: 'Action',
               key: 'action',
               render: (text, record) => (
                 <span>
-                  <a>Invite {record.name}</a>
+                  <a>Organize to bookmarks</a>
                   <Divider type="vertical" />
-                  <a>Delete</a>
+                  <a>Star</a>
                 </span>
               ),
             },
@@ -56,30 +72,64 @@ const CardTableView = () =>{
           
           const data = [
             {
-              key: '1',
-              name: 'John Brown',
-              age: 32,
-              address: 'New York No. 1 Lake Park',
-              tags: ['nice', 'developer'],
+             
+              tags: ['FS'],
+              FeatureSetName: 'Equity Returns from China market',
+              CreatedDate: '02/04/2020',
+              wls: 23,
+              rf: 234,
+              dq: 'pass',
+              description: 'Fugiat labore nulla sunt nulla ea. Non laboris sint minim exercitation voluptate est ea adipisicing. Nisi irure aliquip officia ex. Incididunt proident consectetur esse mollit velit. Eu ex dolor velit cillum cillum enim. Amet non est sint excepteur fugiat ea do veniam id ex.',
             },
             {
-              key: '2',
-              name: 'Jim Green',
-              age: 42,
-              address: 'London No. 1 Lake Park',
-              tags: ['loser'],
+             
+              tags: ['DS'],
+              FeatureSetName: 'Factot loadings ZH 1 day 2583543',
+              CreatedDate: '02/04/2020',
+              wls: 23,
+              rf: 234,
+              dq: 'n/a',
+              description: 'Fugiat labore nulla sunt nulla ea. Non laboris sint minim exercitation voluptate est ea adipisicing. Nisi irure aliquip officia ex. Incididunt proident consectetur esse mollit velit. Eu ex dolor velit cillum cillum enim. Amet non est sint excepteur fugiat ea do veniam id ex.',
             },
             {
-              key: '3',
-              name: 'Joe Black',
-              age: 32,
-              address: 'Sidney No. 1 Lake Park',
-              tags: ['cool', 'teacher'],
+             
+              tags: ['FS'],
+              FeatureSetName: 'Best Operating Lease Commitment, after 5 yrs',
+              CreatedDate: '02/04/2020',
+              wls: 23,
+              rf: 234,
+              dq: 'pass',
+              description: 'Fugiat labore nulla sunt nulla ea. Non laboris sint minim exercitation voluptate est ea adipisicing. Nisi irure aliquip officia ex. Incididunt proident consectetur esse mollit velit. Eu ex dolor velit cillum cillum enim. Amet non est sint excepteur fugiat ea do veniam id ex.',
             },
+            {
+             
+              tags: ['DS'],
+              FeatureSetName: '1% Decrease - effect on PBO (OPEB) - Foreign',
+              CreatedDate: '02/04/2020',
+              wls: 23,
+              rf: 234,
+              dq: 'pass',
+              description: 'Fugiat labore nulla sunt nulla ea. Non laboris sint minim exercitation voluptate est ea adipisicing. Nisi irure aliquip officia ex. Incididunt proident consectetur esse mollit velit. Eu ex dolor velit cillum cillum enim. Amet non est sint excepteur fugiat ea do veniam id ex.',
+            },
+            {
+             
+              tags: ['FS'],
+              FeatureSetName: 'Accumulated Benefit Obligations (Pension)',
+              CreatedDate: '02/04/2020',
+              wls: 23,
+              rf: 234,
+              dq: 'failed',
+              description: 'Fugiat labore nulla sunt nulla ea. Non laboris sint minim exercitation voluptate est ea adipisicing. Nisi irure aliquip officia ex. Incididunt proident consectetur esse mollit velit. Eu ex dolor velit cillum cillum enim. Amet non est sint excepteur fugiat ea do veniam id ex.',
+            },
+           
+            
           ];
 
           return (
-              <Table columns={columns} dataSource={data} />
+              <div className="CardTable">
+                <Table columns={columns} dataSource={data} expandedRowRender={record => <p style={{ margin: 0 }}>{record.description}</p>}/>
+
+              </div>
           )
 
         return <pre>{JSON.stringify(columns, null, 5)}</pre>;

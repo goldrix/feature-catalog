@@ -16,8 +16,8 @@ const ViewOptions = (props) =>{
     return(
         <div className="viewOptionsContainer">
         <Radio.Group value={view} onChange={handleViewChange}>
-          <Radio.Button value="card">Large</Radio.Button>
-          <Radio.Button value="table">table</Radio.Button>
+          <Radio.Button value="card">Card view</Radio.Button>
+          <Radio.Button value="table">Table view</Radio.Button>
         </Radio.Group>
             {view === 'card'? props.renderCard():props.renderTable()}
         </div>

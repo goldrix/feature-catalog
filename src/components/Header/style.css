@@ -63,6 +63,13 @@
     border-bottom: solid 3px #FAAD14;
 } 
 
+.headerRow .active{
+    color: white;
+    cursor: pointer;
+    padding-bottom: 12px;
+    border-bottom: solid 3px #FAAD14;
+}
+
 .menuIcon{
     padding-right: 10px; 
 } 
@@ -75,8 +82,6 @@
 .simple-icon{
     width: 1em;
     height: 1em;
-    
-    
 }
 
 
