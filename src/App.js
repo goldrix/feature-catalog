@@ -4,7 +4,7 @@ import './app.css'
 import 'antd/dist/antd.css';
 import CustomHeader from './components/Header/index'
 import ExportLeftFilter from './components/ExploreLeftFilter/index'
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Spin } from 'antd';
 import ViewOptions from './components/ViewOptions/index'
 import Test from './components/test3/index'
 import CardTableView from '../src/components/Table/index'
@@ -22,11 +22,8 @@ const App = (props) =>{
       
     return(
 
-
-    
     
     <div className="content-container">
-
     <Layout>
       <CustomHeader/>
     <Layout>
@@ -46,7 +43,7 @@ const App = (props) =>{
               
               </div>}/> 
             <Content/>
-          
+              
           </Content>
       </Layout>
       
