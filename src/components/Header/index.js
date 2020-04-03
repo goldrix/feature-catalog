@@ -3,6 +3,8 @@ import './style.css'
 import 'antd/dist/antd.css';
 import { Layout, Menu, Breadcrumb, Icon, Button, Avatar, Tooltip } from 'antd';
 import { Row, Col } from 'antd';
+import DropDownMenu from '../DropDown/index'
+
 
 const { SubMenu } = Menu;
 
@@ -71,6 +73,8 @@ const Header = (props) =>{
                 <span><Button type="link" shape="round" icon="eye" className='secureIPButton'>Secure IP</Button></span>
                 <span><Icon type="question-circle" theme="outlined" style={{color:'#E8E8E8'}} /></span>
                 <span className="avatar"><Avatar icon={<Icon type="user" />} /></span>
+                <DropDownMenu/>
+                
                 </Col>
                 
             </Row>

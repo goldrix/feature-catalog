@@ -120,8 +120,8 @@
 
 .avatar{
     margin-left: 20px;
+    margin-right: 10px;
 }
-
 
 @media (max-width: 1155px) { 
     .add-feature-button-small{
